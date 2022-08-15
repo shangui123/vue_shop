@@ -12,6 +12,8 @@ import Rights from './../components/power/right.vue'
 import Roles from './../components/power/roles.vue'
 import Categories from './../components/goods/Cate.vue'
 import Params from './../components/goods/params.vue'
+import GoodList from './../components/goods/list.vue'
+import GoodAdd from './../components/goods/add.vue'
 
 Vue.use(VueRouter)
 
@@ -52,10 +54,16 @@ const router = new VueRouter({
       }, {
         path: "/categories",
         component: Categories
-
       }, {
         path: "/params",
         component: Params
+      }, {
+        path: "/goods",
+        component: GoodList
+
+      }, {
+        path: "/goodAdd",
+        component: GoodAdd
       }],
 
 

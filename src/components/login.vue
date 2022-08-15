@@ -17,7 +17,7 @@
                 </el-form-item>
                 <!-- 按钮区域 -->
                 <el-form-item class="btns">
-                    <el-button @click="login" type="primary">登录ssss</el-button>
+                    <el-button @click="login" type="primary">登录</el-button>
                     <el-button @click="reset" type="info">重置</el-button>
                 </el-form-item>
             </el-form>
@@ -36,7 +36,7 @@ export default {
                 username: [
                     { required: true, message: '请输入登录账号', trigger: 'blur' },
                     { required: true, message: '请输入活动名称', trigger: 'blur' },
-                ], 
+                ],
                 password: [{ required: true, message: '请输入登录密码', trigger: 'blur' },]
             }
         }
@@ -49,8 +49,8 @@ export default {
         login() {
             this.$refs.form.validate(async valid => {
                 if (!valid) return;
-             
-                let { data:res } = await this.$http.post('login', this.loginForm)
+
+                let { data: res } = await this.$http.post('login', this.loginForm)
                 if (res.meta.status !== 200) return this.$message.error('登录失败')
                 this.$message.success('登录成功')
 
