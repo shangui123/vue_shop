@@ -6,7 +6,6 @@ import Welcome from './../components/welcome.vue'
 import Users from '../components/user/users.vue'
 import Commodity from './../components/commodity.vue'
 import Menager from './../components/menager.vue'
-import Order from './../components/order.vue'
 import Statistics from './../components/statistics.vue'
 import Rights from './../components/power/right.vue'
 import Roles from './../components/power/roles.vue'
@@ -14,6 +13,7 @@ import Categories from './../components/goods/Cate.vue'
 import Params from './../components/goods/params.vue'
 import GoodList from './../components/goods/list.vue'
 import GoodAdd from './../components/goods/add.vue'
+import Order from './../components/order/order.vue'
 
 Vue.use(VueRouter)
 
@@ -38,10 +38,7 @@ const router = new VueRouter({
       }, {
         path: "/menager",
         component: Menager
-      }, {
-        path: "/order",
-        component: Order
-      }, {
+      }, , {
         path: "/statistics",
         component: Statistics
 
@@ -60,10 +57,12 @@ const router = new VueRouter({
       }, {
         path: "/goods",
         component: GoodList
-
       }, {
         path: "/goodAdd",
         component: GoodAdd
+      }, {
+        path: "/orders",
+        component: Order
       }],
 
 
